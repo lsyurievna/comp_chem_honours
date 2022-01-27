@@ -1,0 +1,34 @@
+
+//this line is a must, otherwise nothing will run
+module load gaussian
+
+//create a file with .fchk extension
+formchk name.chk name.fchk
+
+//create files with .cube extension
+cubegen 0 MO=homo name.fchk homo.cube 80 h
+
+The newly generated .cube files can be opened in VMD. 
+
+1) Optimize geometry (can combine both of them)
+bonus: add solvents when doing host-guest chemistry
+2) Frequency check (Opt Freq)  -  vibrational analysis from which thermodynamic 
+parameters can be calculated (like delta G, delta H, delta S)
+Can also tell if the optimized strcture is global minimum or global maximum
+(if all the IR peak frequencies are positive, it is your most stable structure)
+Confirm you have a transition state (all positive outputs, one negative frequency, the last one)
+3) Single point - total electronic energy 
+(electron density, electron population, electronic properties, redox active,
+fluorescent, nmr, ir, raman, cd, nmr titration)
+
+TD-DFT UV-VIS
+
+Dynamic simulations can also be done with Gaussian
+
+Mulliken charge is found in the gaussian output, and has no real applicability.
+Natural bond orbital theory (NBO) is more usefull
+
+
+
+
+
