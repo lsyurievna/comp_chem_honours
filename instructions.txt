@@ -29,6 +29,11 @@ Mulliken charge is found in the gaussian output, and has no real applicability.
 Natural bond orbital theory (NBO) is more usefull
 
 
+If convergence could not be achieved, you can try to use semi-empirical methods such as
+PM6, and AM1, example of first line:
 
+#n AM1 Opt
 
-
+Apparently, to increase the speed of a calculation, you can use:
+%mem=16GB
+%nprocshared=32
